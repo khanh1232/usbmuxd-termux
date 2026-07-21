@@ -25,20 +25,20 @@ git clone https://github.com/khanh12322/usbmuxd-termux.git
 
 ## Workflow
 
-1 Option 1 (Setup): Installs required packages (⁠libusb⁠, ⁠libimobiledevice⁠, ⁠termux-api⁠).
-2 Option 2 (USB Selection & Permission): Scans ⁠/dev/bus/usb/⁠ paths and requests Android USB permission.
-3 Option 3 (Start usbmuxd): Spawns ⁠usbmuxd⁠ in background mode attached to the selected USB port.
-4 Option 4 (Test Pairing): Performs 2-step pairing test. Unlock your iPhone, tap Trust, and enter your screen passcode when prompted
+1. Option 1 (Setup): Installs required packages (⁠libusb⁠, ⁠libimobiledevice⁠, ⁠termux-api⁠, usbmuxd,).
+2. Option 2 (USB Selection & Permission): Scans ⁠/dev/bus/usb/⁠ paths and requests Android USB permission.
+3. Option 3 (Start usbmuxd): Spawns ⁠usbmuxd⁠ in background mode attached to the selected USB port.
+4. Option 4 (Test Pairing): Performs 2-step pairing test. Unlock your iPhone, tap Trust, and enter your screen passcode when prompted
 .
 
 ---
 
 ## Troubleshooting
 
- ⁠No such device⁠ error: Re-plug the cable and re-select the port in Option 2 to clean the path variable.
- No permission popup on Android : Ensure Display over other apps is enabled for ⁠Termux:API⁠ in TV settings.
- Pairing untrusted: Make sure the iPhone screen is unlocked and passcode was entered promptly after tapping "Trust".
- ⁠usbmuxd⁠ port busy: Option 3 automatically kills existing ⁠usbmuxd⁠ instances before launching a new one.
+1. ⁠No such device⁠ error: Re-plug the cable and re-select the port in Option 2 to clean the path variable.
+2. No permission popup on Android : Ensure Display over other apps is enabled for ⁠Termux:API⁠ in TV settings.
+3. Pairing untrusted: Make sure the iPhone screen is unlocked and passcode was entered promptly after tapping "Trust".
+4. ⁠usbmuxd⁠ port busy: Option 3 automatically kills existing ⁠usbmuxd⁠ instances before launching a new one.
 
 ---
 
