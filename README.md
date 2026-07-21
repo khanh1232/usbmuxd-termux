@@ -20,9 +20,12 @@ A lightweight interactive Bash script to run `usbmuxd` and pair iOS devices insi
 Open Termux and run:
 
 `pkg update && pkg install git -y
-git clone https://github.com/khanh12322/usbmuxd-termux.git
-chmod +x main.sh
-./main.sh`
+`
+`git clone https://github.com/khanh12322/usbmuxd-termux.git`
+
+`chmod +x main.sh`
+
+`./main.sh`
 
 ---
 
