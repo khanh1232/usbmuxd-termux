@@ -7,8 +7,8 @@ A lightweight interactive Bash script to run `usbmuxd` and pair iOS devices insi
 ## Prerequisites
 
 1. Install **[Termux](https://github.com/termux/termux-app/releases)**.
-2. Install **[Termux:API APK](https://github.com/termux/termux-api/releases)** (Required for USB access).
-3. Connect via OTG to the iPhone to run the script.
+2. Install **[Termux:API APK](https://github.com/termux/termux-api/releases)** (Required for USB access)
+3. OTG Required
 
 > **Note for Android TV users:** > System USB permission popups will not show on TV screens unless overlay permission is granted.  
 > Go to **Settings** -> **Apps** -> **Termux:API** -> enable **Display over other apps**.
