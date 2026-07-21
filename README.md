@@ -4,22 +4,13 @@ A lightweight interactive Bash script to run `usbmuxd` and pair iOS devices insi
 
 ---
 
-## Features
-
-* **No Root Required:** Uses `termux-api` (`termux-usb`) to handle USB communication.
-* **Status Monitoring:** Real-time display of connected iOS device state (`DISCONNECTED`, `UNTRUSTED`, or `TRUSTED`).
-* **Auto USB Filtering:** Scans `/dev/bus/usb/` paths and filters out JSON formatting clutter.
-* **Guided Pairing:** Handles 2-step `idevicepair` sequence smoothly.
-
----
-
 ## Prerequisites
 
 1. Install **[Termux](https://github.com/termux/termux-app/releases)**.
 2. Install **[Termux:API APK](https://github.com/termux/termux-api/releases)** (Required for USB access).
 
-> **Note for Android TV users:**  
-> On TV screens, system USB permission popups won't show up unless overlay permission is enabled. Go to **Settings** -> **Apps** -> **Termux:API** -> enable **Display over other apps**.
+> **Note for Android TV users:** > System USB permission popups will not show on TV screens unless overlay permission is granted.  
+> Go to **Settings** -> **Apps** -> **Termux:API** -> enable **Display over other apps**.
 
 ---
 
@@ -27,9 +18,32 @@ A lightweight interactive Bash script to run `usbmuxd` and pair iOS devices insi
 
 Open Termux and run:
 
-```bash
 pkg update && pkg install git -y
-git clone [https://github.com/](https://github.com/khanh12322/usbmuxd-termux.git
-cd usbmuxd-termux
-chmod +x main.sh
-./main.sh
+git clone https://github.com/khanh12322/usbmuxd-termux.git
+
+---
+
+## Workflow
+
+1 Option 1 (Setup): Installs required packages (⁠libusb⁠, ⁠libimobiledevice⁠, ⁠termux-api⁠).
+2 Option 2 (USB Selection & Permission): Scans ⁠/dev/bus/usb/⁠ paths and requests Android USB permission.
+3 Option 3 (Start usbmuxd): Spawns ⁠usbmuxd⁠ in background mode attached to the selected USB port.
+4 Option 4 (Test Pairing): Performs 2-step pairing test. Unlock your iPhone, tap Trust, and enter your screen passcode when prompted
+.
+
+---
+
+## Troubleshooting
+
+ ⁠No such device⁠ error: Re-plug the cable and re-select the port in Option 2 to clean the path variable.
+ No permission popup on Android : Ensure Display over other apps is enabled for ⁠Termux:API⁠ in TV settings.
+ Pairing untrusted: Make sure the iPhone screen is unlocked and passcode was entered promptly after tapping "Trust".
+ ⁠usbmuxd⁠ port busy: Option 3 automatically kills existing ⁠usbmuxd⁠ instances before launching a new one.
+
+---
+
+### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
