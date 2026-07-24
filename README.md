@@ -23,6 +23,8 @@ Open Termux and run:
 `
 `git clone https://github.com/khanh12322/usbmuxd-termux.git`
 
+`cd usbmuxd-termux`
+
 `chmod +x main.sh`
 
 `./main.sh`
